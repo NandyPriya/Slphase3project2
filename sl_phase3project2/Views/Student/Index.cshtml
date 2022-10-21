@@ -1,0 +1,57 @@
+﻿@model IEnumerable<sl_phase3project2.Models.StudentClass>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Studentid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Studname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Studentid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Studname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("edit", "edit", new {  id=item.Studentid  }) |
+            @Html.ActionLink("details", "details", new {  id=item.Studentid }) |
+            @Html.ActionLink("delete", "delete", new {  id=item.Studentid  })
+        </td>
+    </tr>
+}
+
+</table>

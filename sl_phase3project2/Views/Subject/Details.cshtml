@@ -1,0 +1,42 @@
+﻿@model sl_phase3project2.Models.SubjectModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubjectModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Subjectid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subjectid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Subjectid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

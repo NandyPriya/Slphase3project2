@@ -1,0 +1,45 @@
+﻿@model IEnumerable<sl_phase3project2.Models.SubjectModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subjectid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subjectid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.Subjectid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Subjectid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Subjectid })
+        </td>
+    </tr>
+}
+
+</table>
