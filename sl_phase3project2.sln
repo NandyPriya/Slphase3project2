@@ -12,8 +12,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{BA1B0A41-EFD1-43C9-96D7-0D0C9210A1D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{0E0AE298-6D48-4728-B11C-00DE6E715359}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA1B0A41-EFD1-43C9-96D7-0D0C9210A1D7} = {BA1B0A41-EFD1-43C9-96D7-0D0C9210A1D7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary3", "ClassLibrary3\ClassLibrary3.csproj", "{1E7C3307-DB49-47AD-80C1-0DBED337B489}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E0AE298-6D48-4728-B11C-00DE6E715359} = {0E0AE298-6D48-4728-B11C-00DE6E715359}
+		{BA1B0A41-EFD1-43C9-96D7-0D0C9210A1D7} = {BA1B0A41-EFD1-43C9-96D7-0D0C9210A1D7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
